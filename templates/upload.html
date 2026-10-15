@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Upload File - File Share App</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+</head>
+<body>
+  <main class="container">
+    <h2>Upload & Share File</h2>
+    
+    <form action="/upload" method="POST" enctype="multipart/form-data">
+
+      <!-- Passcode Input -->
+      <label for="passcode">Upload Passcode</label>
+      <input type="password" id="passcode" name="passcode" placeholder="Enter passcode" required>
+      
+      <!-- File Input -->
+      <label for="file">Select File from Local Storage</label>
+      <input type="file" id="file" name="file" required>
+
+      <!-- Up to 5 Email Addresses -->
+      <fieldset>
+        <legend>Recipient Emails (Up to 5)</legend>
+        <input type="password" name="emails" placeholder="Email 1 (required)" required>
+        <input type="password" name="emails" placeholder="Email 2 (optional)">
+        <input type="password" name="emails" placeholder="Email 3 (optional)">
+        <input type="password" name="emails" placeholder="Email 4 (optional)">
+        <input type="password" name="emails" placeholder="Email 5 (optional)">
+      </fieldset>
+
+      <button type="submit">Upload to S3 & Send Emails</button>
+    </form>
+  </main>
+</body>
+</html>
