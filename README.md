@@ -1,6 +1,6 @@
 # Cloud File Upload Demo (Flask + AWS)
 
-A serverless web application that allows authenticated users to upload files to Amazon S3. Upon upload, an AWS Lambda function is triggered to log the file metadata in DynamoDB and send a confirmation email via Amazon SES.
+A serverless web application that allows users to upload files to Amazon S3. Upon upload, an AWS Lambda function is triggered to log the file metadata in DynamoDB and send a confirmation email via Amazon SES.
 
 ## 🎥 Project Demo
 ![AWS S3 Upload Demo](assets/cloud_project_demo.gif)
@@ -42,17 +42,10 @@ cd cloud-file-upload-demo
 ### 3. Set Up the Virtual Environment
 Create an isolated Python environment so dependencies don't conflict with your system.
 
-**For Windows (PowerShell/CMD):**
+**For Windows (Git Bash):**
 ```powershell
-python -m venv venv
-.\venv\Scripts\activate
-```
-*(Note: If you are using Git Bash or a Unix-style terminal on Windows, use `source venv/bin/activate` instead).*
-
-**For macOS/Linux:**
-```bash
-python3 -m venv venv
-source venv/bin/activate
+py -m venv venv
+source venv/Scripts/activate
 ```
 
 ### 4. Install Dependencies
